@@ -1,0 +1,15 @@
+[package]
+name = "linkedin-devops-jobs"
+version = "0.1.0"
+edition = "2021"
+description = "List public LinkedIn DevOps Engineer jobs posted in the last 7 days, defaulting to Hong Kong, with guest-page details"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls"] }
+scraper = "0.22"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+crossterm = "0.28"
+ratatui = "0.29"
+serde_json = "1"
+rusqlite = { version = "0.32", features = ["bundled"] }
